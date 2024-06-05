@@ -1,0 +1,27 @@
+/* Local Bootstrap Overrides */
+ul.nav-pills > li.nav-item > button.nav-link.active {
+  background-color: #04066a;
+}
+ul.nav-pills button.nav-link {
+  color: #04066a;
+}
+
+/* Icon size limiting for lists*/
+.list-group img {
+  max-height: 32px;
+  max-width: 30px;
+}
+
+/*Pen specific*/
+.demo {
+  height: 500px;
+  width: 800px;
+  margin: 10px auto;
+  padding: 20px;
+  background-color: #efefef;
+  border-radius: 5px;
+}
+
+.bg {
+  background-color: black;
+}

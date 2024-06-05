@@ -1,0 +1,25 @@
+<html lang="en" class="no-js">
+<head>
+  
+</head>
+<body oncontextmenu="return false;">
+ <style>body,iframe{width:100%;height:100%;margin:0;padding:0;border:0;background-color:#0000;}</style><body></body><script>
+
+var IFRAMEWINDOW = document.createElement("iframe"); // create RTCS.Live in an IFRAME
+IFRAMEWINDOW.src = "https://web.rtcs.live/?scene=0&layout&remote&room=JanaSakthi";
+
+IFRAMEWINDOW.onload = function(){ // start polling shortly after we connect
+    setInterval(function(){
+            IFRAMEWINDOW.contentWindow.postMessage({"getDetailedState":true}, "*");  // get details every second
+        },1000);
+}
+document.body.appendChild(IFRAMEWINDOW); // add the RTCS Live element to the page, so its active/visible
+
+window.addEventListener("message", (e) => {
+  if (e.source != IFRAMEWINDOW.contentWindow){return} // only listen for vdo.ninja events
+  console.log(e.data);// print the messages inbound to the console log
+});
+</script>
+  
+</body>
+</html>
