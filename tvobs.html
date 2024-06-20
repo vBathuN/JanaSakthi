@@ -246,5 +246,74 @@ type="text/javascript"></script>
 <!-- partial -->
   <script  src="./script.js"></script>
 
+<script>
+const urlParams = new URLSearchParams(window.location.search);
+
+const title = urlParams.get('title');
+const subTitle = urlParams.get('subTitle');
+const once = urlParams.get('once');
+
+if (title) {
+  document.getElementById('titleText').innerHTML = title; 
+  document.getElementById('titleContainer').style.display = 'block'; 
+}
+
+if (subTitle) {
+  document.getElementById('subTitleText').innerHTML = subTitle;  
+  document.getElementById('subTitleContainer').style.display = 'block'; 
+}
+
+if (!title && !subTitle) {
+  document.getElementById('titleContainer').style.display = 'block';
+  document.getElementById('subTitleContainer').style.display = 'block';
+}
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js'></script>
+<script>
+const text = "BREAKINGNEWS";
+
+const textEl = document.querySelector(".visible-text");
+
+function animate() {
+  const characterEls = textEl.querySelectorAll("span");
+  const tl = anime.timeline({
+    easing: "easeOutExpo",
+    duration: 400,
+    loop: true,
+  });
+  tl.add({
+    targets: ".banner",
+    scaleX: [0, 1],
+    duration: 800,
+    easing: "easeOutCubic"
+  })
+    .add({
+      targets: ".muted-text",
+      opacity: [0, 1]
+    })
+    .add({
+      targets: characterEls,
+      delay: anime.stagger(120),
+      translateY: [30, 0],
+      translateX: [-10, 0],
+      opacity: [0, 1],
+      easing: "spring"
+    });
+}
+
+function init() {
+  const docEl = new DocumentFragment();
+  text.split("").forEach((character) => {
+    const span = document.createElement("span");
+    span.innerText = character;
+    docEl.appendChild(span);
+  });
+  textEl.appendChild(docEl);
+}
+
+init();
+animate();
+</script>
+
 </body>
 </html>
