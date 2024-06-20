@@ -191,12 +191,12 @@ animation-name: blinker;
   white-space: nowrap;
 }
 .ticker .stock-info {
-  background: linear-gradient(90deg, #000, #000 25%, #0a0 95%, #000 95%, #000);
+  background: #19f radial-gradient(transparent, #02c);
   box-shadow: -16px 0 20px #000;
   position: absolute;
   top: 0;
   right: 0;
-  width: 190px;
+  width: 200px;
   height: 48px;
 }
 .ticker .stock-symbol {
@@ -205,7 +205,7 @@ animation-name: blinker;
   clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
   border: 2px solid #fff;
   float: left;
-  width: 68px;
+  width: 50px;
   height: 43px;
 }
 .ticker .stock-symbol p {
@@ -215,7 +215,7 @@ animation-name: blinker;
 }
 .ticker span {
   float: left;
-  width: 85px;
+  width: 140px;
   line-height: 2.5em;
   margin-left: 0px;
   text-shadow: 0 2px 4px #000;
@@ -264,89 +264,6 @@ animation-name: blinker;
 
 .color1{
   background-color: #870407;
-}
-
-
-.primTxt{
-  color: white;
-  font-weight:800;
-  font-size:16px;
-  line-height:10px;
-  margin: 11.5px 0;
-}
-
-.secTxt{
-  color:white;
-  font-weight:600;
-  font-size:12px;
-  line-height:10px;
-  margin:13px 0;
-}
-
-#lowerThird{
-  display:flex;
-}
-
-.flexContainer{
-  display:flex;
-  flex-flow: row wrap;
-  width:auto;
-  margin: 20px -880px;
-}
-
-.container{
-  position:relative;
-  overflow:hidden;
-  display:inline-flex;
-}
-
-.lineBreak{
-  width:100%;
-}
-
-.box3{
-  height:100%;
-  width:100%;
-  transform:translate3D(-100%, 0, 0);
-  overflow:hidden;
-  animation-name:box3;
-  animation-delay:.75s;
-  animation-duration:20s;
-  animation-iteration-count:infinite;
-}
-
-.text{
-  padding:0px 10px;
-  max-width:1420px;
-  animation-name:text1;
-  animation-delay:1s;
-  animation-duration:20s;
-  animation-iteration-count:infinite;
-  transform:translate3d(calc(-100% - 40px), 0, 0);
-}
-
-@keyframes box3{
-  0% {
-    transform:translate3D(-100%, 0, 0);
-    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-  }
-  12%, 60% {
-    transform:translate3D(0, 0, 0);
-    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-  }
-  65%, 100% {transform:translate3D(-100%, 0, 0)}
-}
-
-@keyframes text1{
-  0% {
-    transform:translate3d(calc(-100% - 40px), 0, 0);
-    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-  }
-  6%, 70% {
-    transform:translate3d(0, 0, 0);
-    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-  }
-  72%, 100% {transform:translate3d(calc(-100% - 40px), 0, 0)}
 }
 
 .ticker-top {
