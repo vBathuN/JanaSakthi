@@ -35,7 +35,7 @@ p {
 
 .logo-area {
   z-index: 1;
-  background: #fff radial-gradient(transparent, #02c);
+  background: #19f radial-gradient(transparent, #fff);
   display: row;
   height: 110px;
   width: 18%;
